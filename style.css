@@ -13,5 +13,5 @@ body {
     border: 8px solid black;
     display: flex;
     flex-wrap: wrap;
-    max-width: 420px;
+    max-width: 640px;
 }

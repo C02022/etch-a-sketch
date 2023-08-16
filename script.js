@@ -3,12 +3,15 @@ function createGrid() {
 
     for (let i = 1; i < 17; i++) {;
         for (let j = 1; j < 17; j++) {
-            const squareDiv = document.createElement('div');
-            squareDiv.style.cssText = 'width: 20px; height: 20px;'
-            content.appendChild(squareDiv);
-            // console.log(`Square Added on Row: ${i} , Column: ${j}`);
+            const currentSquareDiv = document.createElement('div');
+            currentSquareDiv.style.cssText = 'width: 40px; height: 40px;'
+
+            currentSquareDiv.addEventListener("mouseover", () => {
+                currentSquareDiv.style.backgroundColor = "red";
+            });
+            
+            content.appendChild(currentSquareDiv);
         }
-        // console.log(`Done with Row: ${i}`);
     }
 }
 
