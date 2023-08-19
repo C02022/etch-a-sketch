@@ -34,8 +34,8 @@ function main() {
 
     newGridButton.addEventListener("click", () => {
         let userGridPrompt = parseInt(prompt("Enter the number of squares per side"));
-
-        while (userGridPrompt > 100 && userGridPrompt < 1) {
+        
+        while ((userGridPrompt > 100 || userGridPrompt < 1) || isNaN(userGridPrompt)) {
             userGridPrompt = parseInt(prompt("Enter the number of squares per side"));
         }
 
