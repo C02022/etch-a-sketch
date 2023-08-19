@@ -22,12 +22,12 @@ body {
     gap: 40px;
 }
 
-.new-grid-button, .pen-status-button {
+.new-grid-button{
     color: white;
     background-color: black;
     border-color: white;
     font-weight: 800;
-    font-size: 36px;
+    font-size: 50px;
     text-align: center;
     border-radius: 8px;
     cursor: pointer;
@@ -39,13 +39,13 @@ body {
     align-self: center;
 }
 
-.new-grid-button:hover, .pen-status-button:hover {
+.new-grid-button:hover {
     color: black;
     background-color: darkolivegreen;
     border: 8px solid black;
 }
 
-.new-grid-button:active, .pen-status-button:active {
+.new-grid-button:active {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
@@ -55,7 +55,7 @@ body {
     pointer-events: none;
 }
 
-.grid {
+#grid {
     border: 16px ridge black;
     display: flex;
     flex-wrap: wrap;

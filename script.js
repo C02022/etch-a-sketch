@@ -1,12 +1,15 @@
-function createGrid(numOfSquares) {
-    const grid = document.querySelector('.grid');
+const MAX_SKETCH_PAD_WIDTH = 960;
+const STARTING_NUM_OF_SQUARES_PER_SIDE = 16;
 
-    for (let i = 0; i < numOfSquares; i++) {;
-        for (let j = 0; j < numOfSquares; j++) {
+function createGrid(numOfSquaresPerSide) {
+    const grid = document.getElementById('grid');
+
+    for (let i = 0; i < numOfSquaresPerSide; i++) {;
+        for (let j = 0; j < numOfSquaresPerSide; j++) {
             const currentSquareDiv = document.createElement('div');
             
-            let currentSquareDivMeasurement = 960 / numOfSquares
-            currentSquareDiv.style.cssText = `width: ${currentSquareDivMeasurement}px; height: ${currentSquareDivMeasurement}px;`
+            let currentSquareDivMeasurement = MAX_SKETCH_PAD_WIDTH / numOfSquaresPerSide
+            currentSquareDiv.style.width = currentSquareDiv.style.height = `${currentSquareDivMeasurement}px`;
 
             currentSquareDiv.addEventListener("mouseover", () => {
                 currentSquareDiv.style.backgroundColor = "darkolivegreen";
@@ -17,33 +20,30 @@ function createGrid(numOfSquares) {
     }
 }
 
-// function addButtonFunctionality() {}
-
-
-// This helper function clears the current etch-a-sketch pad/grid that's on the page
+/*
+This helper function clears the current etch-a-sketch pad/grid that's on the 
+page. Mainly added to declutter 'main' & organize code for newer features later on.
+*/
 function clearCurrentGrid() {
-    const grid = document.querySelector('.grid');
-    
-    while (grid.firstChild) {
-        grid.removeChild(grid.firstChild);
-     }
+    const grid = document.getElementById('grid');
+    grid.innerHTML = "";
 }
 
 function main() {
     const newGridButton = document.querySelector('.new-grid-button');
-    // const penStatusButton = document.querySelector('.pen-status-button');
 
     newGridButton.addEventListener("click", () => {
         let userGridPrompt = parseInt(prompt("Enter the number of squares per side"));
 
-        while (userGridPrompt > 100) {
+        while (userGridPrompt > 100 && userGridPrompt < 1) {
             userGridPrompt = parseInt(prompt("Enter the number of squares per side"));
         }
+
         clearCurrentGrid();
         createGrid(userGridPrompt);
     });
 
-    createGrid(16);
+    createGrid(STARTING_NUM_OF_SQUARES_PER_SIDE);
 }
 
 main()  
