@@ -1,33 +1,49 @@
-function createGrid() {
-    const content = document.querySelector('.grid');
+function createGrid(numOfSquares) {
+    const grid = document.querySelector('.grid');
 
-    for (let i = 1; i < 17; i++) {;
-        for (let j = 1; j < 17; j++) {
+    for (let i = 0; i < numOfSquares; i++) {;
+        for (let j = 0; j < numOfSquares; j++) {
             const currentSquareDiv = document.createElement('div');
-            currentSquareDiv.style.cssText = 'width: 40px; height: 40px;'
+            
+            let currentSquareDivMeasurement = 960 / numOfSquares
+            currentSquareDiv.style.cssText = `width: ${currentSquareDivMeasurement}px; height: ${currentSquareDivMeasurement}px;`
 
             currentSquareDiv.addEventListener("mouseover", () => {
                 currentSquareDiv.style.backgroundColor = "darkolivegreen";
             });
             
-            content.appendChild(currentSquareDiv);
+            grid.appendChild(currentSquareDiv);
         }
     }
 }
 
+// function addButtonFunctionality() {}
+
+
+// This helper function clears the current etch-a-sketch pad/grid that's on the page
+function clearCurrentGrid() {
+    const grid = document.querySelector('.grid');
+    
+    while (grid.firstChild) {
+        grid.removeChild(grid.firstChild);
+     }
+}
+
 function main() {
-    // FEINT IDEA OF WHAT TO DO NEXT
+    const newGridButton = document.querySelector('.new-grid-button');
+    // const penStatusButton = document.querySelector('.pen-status-button');
 
-    // Create button
-        // When button is clicked (eventlistner), make sure the 
-        // button cant be clicked, send the prompt to to ask for the desired
-        // grid length (# of squares), store that answer in a variable, and then
-        // call a function that takes in the prompt variable and creates a new grid with it
-        // (Maybe refactor 'createGrid to have parameters in the loop and just have those values by default be 16?)
+    newGridButton.addEventListener("click", () => {
+        let userGridPrompt = parseInt(prompt("Enter the number of squares per side"));
 
+        while (userGridPrompt > 100) {
+            userGridPrompt = parseInt(prompt("Enter the number of squares per side"));
+        }
+        clearCurrentGrid();
+        createGrid(userGridPrompt);
+    });
 
-
-    createGrid()
+    createGrid(16);
 }
 
 main()  
