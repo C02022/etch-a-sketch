@@ -36,10 +36,6 @@ We welcome contributions from the community to enhance this Etch-A-Sketch Web Ap
 
 Please ensure that your code adheres to the project's coding standards and guidelines.
 
-## License
-
-This project is licensed under the [MIT License](insert-license-link-here).
-
 ## Contact
 
 If you have any questions, feedback, or suggestions, please feel free to reach out to us:
