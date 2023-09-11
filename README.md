@@ -2,7 +2,7 @@
 
 ![Etch-A-Sketch](insert-image-link-here)
 
-Welcome to the Etch-A-Sketch Web App repository! This project brings the nostalgia of the classic Etch-A-Sketch toy into the digital world. Unleash your creativity and start sketching, doodling, and drawing with ease.
+Welcome to the Etch-A-Sketch Web App repository! This project brings the nostalgia of the classic Etch-A-Sketch toy onto a digital plain. Unleash your creativity and start sketching, doodling, and drawing with ease.
 
 ## Demo
 
@@ -26,7 +26,7 @@ Follow these simple steps to get the Etch-A-Sketch Web App up and running on you
 
 ## Contributing
 
-We welcome contributions from the community to enhance this Etch-A-Sketch Web App. If you'd like to contribute, please follow these steps:
+I welcome contributions from any & everyone to enhance or play around with this Etch-A-Sketch Web App. If you'd like to contribute, please follow these steps:
 
 1. Fork the repository.
 2. Create a new branch: `git checkout -b feature/your-feature-name`
@@ -34,11 +34,9 @@ We welcome contributions from the community to enhance this Etch-A-Sketch Web Ap
 4. Push to the branch: `git push origin feature/your-feature-name`
 5. Create a pull request.
 
-Please ensure that your code adheres to the project's coding standards and guidelines.
-
 ## Contact
 
-If you have any questions, feedback, or suggestions, please feel free to reach out to us:
+If you have any questions, feedback, or suggestions, please feel free to reach out to me:
 
 - GitHub: https://github.com/C02022
 - Email: chrisobando107@gmail.com
