@@ -1,14 +1,12 @@
 # Etch-A-Sketch Web App
 
-![Etch-A-Sketch](insert-image-link-here)
-
 Welcome to the Etch-A-Sketch Web App repository! This project brings the nostalgia of the classic Etch-A-Sketch toy onto a digital plain. Unleash your creativity and start sketching, doodling, and drawing with ease.
 
 ## Demo
 
 See the Etch-A-Sketch Web App in action: [Live Demo](https://c02022.github.io/etch-a-sketch/)
 
-## Features
+## Features (In Progress)
 
 - Intuitive drawing interface
 - Quick erase functionality
@@ -39,6 +37,6 @@ I welcome contributions from any & everyone to enhance or play around with this 
 If you have any questions, feedback, or suggestions, please feel free to reach out to me:
 
 - GitHub: https://github.com/C02022
-- Email: chrisobando107@gmail.com
+- Email: co1553@rit.edu
 
 Happy sketching! 🎨
